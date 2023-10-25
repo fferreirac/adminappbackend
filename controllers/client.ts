@@ -15,7 +15,7 @@ export const getAll = async (req: any, res: Response) => {
 }
 
 export const create = async (req: any, res: Response) => {
-    
+    console.log({ body: req.body })
     const cretedClient = await ClientModel.create( req.body );
     res.status(201).json( { ok: true, data: cretedClient } );
 }
